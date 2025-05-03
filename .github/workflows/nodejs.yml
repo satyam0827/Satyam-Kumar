@@ -31,7 +31,4 @@ jobs:
     - name: Run tests
       run: npm test
 
-    # Optional: Deploy step
-    - name: Deploy (optional)
-      if: github.ref == 'refs/heads/main'
-      run: echo "Add your deploy script or command here"
+   
