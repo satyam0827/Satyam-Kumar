@@ -5,4 +5,8 @@ function add( a ,  b){
     return a+b;
 }
 
+//function to divide two numbers
+function div(a,b){
+    return a/b;
+}
 console.log(add(a,b));
