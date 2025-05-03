@@ -9,4 +9,5 @@ function add( a ,  b){
 function div(a,b){
     return a/b;
 }
+//log function
 console.log(add(a,b));
