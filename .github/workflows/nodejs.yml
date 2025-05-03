@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI Check
 
 on:
   push:
@@ -7,30 +7,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-       
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
-
-    # Optional: Add deploy step here
-    - name: Deploy (optional)
-      if: github.ref == 'refs/heads/main'
-      run: echo "Add deploy script here"
+    - name: Say Hello
+      run: echo "✅ GitHub Actions automation is working!"
